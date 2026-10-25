@@ -78,7 +78,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Benchmark reports, additional tuning, an
 
 ## Credits
 
-- [fs0ciety404/ps5-relapse](https://github.com/fs0ciety404/ps5-relapse) — jailbreak chain
+- [ntfargo/ps5-relapse](https://github.com/ntfargo/ps5-relapse) — Relapse jailbreak (FW 7.00–13.60, PS5 + Pro)
 - [soniciso1/ps5-linux-loader](https://github.com/soniciso1/ps5-linux-loader) — Linux boot payload
 - [WizGery/ps5-mediatek-fixes](https://github.com/WizGery/ps5-mediatek-fixes) — MT7921 WiFi/BT driver patches
 - Scene PS5 Discord community
