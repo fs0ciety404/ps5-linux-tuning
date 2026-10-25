@@ -1,0 +1,47 @@
+name: Benchmark report
+description: Share a measured result on PS5 Linux.
+labels: [benchmark]
+body:
+  - type: input
+    attributes:
+      label: Game + Steam appid
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: PS5 model + firmware
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Kernel + Mesa version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Resolution + preset
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Launch options
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Measurement method + scene
+      description: MangoHud? Length? Static scene or in-game?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Numbers
+      description: Average FPS, 1% low, VRAM peak. Baseline vs with repo tunings if possible.
+      render: markdown
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        If you want this included under `benchmarks/`, consider opening a PR
+        using `benchmarks/TEMPLATE.md` instead.

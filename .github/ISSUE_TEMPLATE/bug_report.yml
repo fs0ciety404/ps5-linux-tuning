@@ -1,0 +1,41 @@
+name: Bug report
+description: Something in this repo misbehaves on your setup.
+labels: [bug]
+body:
+  - type: input
+    attributes:
+      label: PS5 model + firmware
+      placeholder: "CFI-2016 (B01Y), FW 13.60"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Linux kernel + distro
+      placeholder: "7.1.7, Ubuntu 26.04"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Jailbreak chain
+      placeholder: "Relapse (ntfargo) + soniciso1 ps5-linux-loader"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened
+      description: Expected vs observed. Include exact error strings.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Repro steps
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Output of scripts/check-state.sh
+      render: shell
+  - type: textarea
+    attributes:
+      label: Relevant dmesg / journal lines
+      render: shell
