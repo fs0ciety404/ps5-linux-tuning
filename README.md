@@ -60,9 +60,9 @@ Short list:
 
 See [benchmarks/](benchmarks/). Community contributions welcome via PR using [TEMPLATE.md](benchmarks/TEMPLATE.md).
 
-Reference external results:
-- [Digital Foundry: PS5 Linux Steam games close to native console performance](https://videocardz.com/newz/ps5-linux-tested-steam-games-come-close-to-native-console-performance)
-- [Notebookcheck coverage](https://notebookcheck.net/Linux-on-PS5-benchmarked-with-PlayStation-games-impressing-on-Steam-Machine-alternative.1289679.0.html)
+No vetted benchmark data is published here yet. Third-party coverage of "PS5 Linux benchmarks" circulating in late 2026 (Digital Foundry et al.) used Andy Nguyen's BD-JB exploit on launch-era PS5 units running firmware 4.50, which is a different chain from the Relapse-based FW 13.60 setup this repo targets. Numbers from that coverage do not transfer 1:1.
+
+If you run a measured benchmark on a Relapse / 13.60 Linux setup, PR it in — that is the only data this repo will cite until primary runs on this exact stack exist.
 
 ## Documentation
 
