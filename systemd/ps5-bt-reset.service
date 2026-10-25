@@ -1,0 +1,23 @@
+[Unit]
+# Workaround for MediaTek MT7921 BT chip init failure on PS5 Linux (kernel 7.1.7).
+# Symptom: dmesg shows
+#   Bluetooth: hci0: command 0xfd98 tx timeout
+#   Bluetooth: hci0: Failed to apply iso setting (-110)
+# and hciconfig reports hci0 DOWN with BD Address 00:00:00:00:00:00.
+# Root cause: ISO (Isochronous) HCI setup command times out during btusb probe.
+# After a manual `hciconfig hci0 reset && hciconfig hci0 up` the chip comes up
+# fully with a valid BD address. This unit automates that reset after boot.
+Description=PS5 MediaTek BT init workaround (hciconfig reset)
+After=bluetooth.service
+Requires=bluetooth.service
+
+[Service]
+Type=oneshot
+# Give bluez a moment to finish its own init attempts before we reset.
+ExecStartPre=/bin/sleep 2
+ExecStart=/usr/bin/hciconfig hci0 reset
+ExecStartPost=/usr/bin/hciconfig hci0 up
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
